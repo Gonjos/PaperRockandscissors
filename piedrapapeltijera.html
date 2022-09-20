@@ -30,7 +30,15 @@
         }
         //Combat
         if (pc == jugador) {
-            alert("Haz empatado con la parca!")
+            alert("Haz empatado con la parca! Aún sigues vivo...")
+        } else if (jugador == 1 && pc == 3) {
+            alert("Le has ganado a la parca!👌")
+        } else if (jugador == 2 && pc == 1) {
+            alert("Has vencido ante la parca! 🌊")
+        } else if (jugador == 3 && pc == 2) {
+            alert("La parca ha perdido! Felicidades mortal...")
+        } else {
+            alert("La parca ha trinfado...☠️")
         }
     </script>
 </head>
