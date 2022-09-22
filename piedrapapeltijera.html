@@ -6,14 +6,19 @@
 
     <title>El juego de los grandes</title>
     <script>
+        function aleatorio(max, min) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
         // 1 es piedra, 2 es papel, 3 es tijera.
         let jugador = 0
-        let pc = 2
-        alert("Las reglas son simples, así que presta mucha atención pequeño mortal: Si eliges la piedra de hades destruiras al rayo de zeus pero puedes sufrir la ira de poseidón; piensa bien que elegirás porque la parca es astuta...")
+        let min = 1
+        let max = 3
+        let parca = aleatorio(3, 1)
+        alert("Las reglas son simples, así que presta mucha atención pequeño mortal: Si eliges la piedra de hades 🪨 destruiras al rayo de zeus ⚡ pero puedes sufrir la ira de poseidón 🌊; así que piensa bien que elegirás porque la parca es astuta... ☠️")
         jugador = prompt("Elige una opción, mortal inmundo: 1 para la piedra 🪨 de hades, 2 para el agua 🌊 de poseidon o 3 para el rayo ⚡ de zeus")
             // alert("elegiste " + jugador)
         if (jugador == 1) {
-            alert("Elegiste la piedra🪨 de hades")
+            alert("Elegiste la piedra 🪨 de hades")
         } else if (jugador == 2) {
             alert("Elegiste el agua 🌊 de poseidón")
         } else if (jugador == 3) {
@@ -21,21 +26,21 @@
         } else {
             alert("Elije una opción correcta plebeyo!")
         }
-        if (pc == 1) {
+        if (parca == 1) {
             alert("La parca eligió la piedra 🪨 de hades")
-        } else if (pc == 2) {
+        } else if (parca == 2) {
             alert("La parca eligió el agua 🌊 de poseidón")
-        } else if (pc == 3) {
+        } else if (parca == 3) {
             alert("La parca eligió el rayo ⚡ de zeus")
         }
         //Combat
-        if (pc == jugador) {
+        if (parca == jugador) {
             alert("Haz empatado con la parca! Aún sigues vivo...")
-        } else if (jugador == 1 && pc == 3) {
+        } else if (jugador == 1 && parca == 3) {
             alert("Le has ganado a la parca!👌")
-        } else if (jugador == 2 && pc == 1) {
+        } else if (jugador == 2 && parca == 1) {
             alert("Has vencido ante la parca! 🌊")
-        } else if (jugador == 3 && pc == 2) {
+        } else if (jugador == 3 && parca == 2) {
             alert("La parca ha perdido! Felicidades mortal...")
         } else {
             alert("La parca ha trinfado...☠️")
