@@ -9,28 +9,30 @@
         function aleatorio(max, min) {
             return Math.floor(Math.random() * (max - min + 1) + min)
         }
+
+        function eleccion(jugada) {
+            let result = ""
+            if (jugada == 1) {
+                result = "La piedra 🪨 de hades"
+            } else if (jugada == 2) {
+                result = "El agua 🌊 de poseidón"
+            } else if (jugada == 3) {
+                result = "El rayo ⚡ de zeus"
+            } else {
+                result = "Elije una opción correcta plebeyo!"
+            }
+            return result
+        }
+
         // 1 es piedra, 2 es papel, 3 es tijera.
         let jugador = 0
         let parca = aleatorio(3, 1)
         alert("Las reglas son simples, así que presta mucha atención pequeño mortal: Si eliges la piedra de hades 🪨 destruiras al rayo de zeus ⚡ pero puedes sufrir la ira de poseidón 🌊; así que piensa bien que elegirás porque la parca es astuta... ☠️")
-        jugador = prompt("Elige una opción, mortal inmundo: 1 para la piedra 🪨 de hades, 2 para el agua 🌊 de poseidon o 3 para el rayo ⚡ de zeus")
-            // alert("elegiste " + jugador)
-        if (jugador == 1) {
-            alert("Elegiste la piedra 🪨 de hades")
-        } else if (jugador == 2) {
-            alert("Elegiste el agua 🌊 de poseidón")
-        } else if (jugador == 3) {
-            alert("Elegiste el rayo ⚡ de zeus")
-        } else {
-            alert("Elije una opción correcta plebeyo!")
-        }
-        if (parca == 1) {
-            alert("La parca eligió la piedra 🪨 de hades")
-        } else if (parca == 2) {
-            alert("La parca eligió el agua 🌊 de poseidón")
-        } else if (parca == 3) {
-            alert("La parca eligió el rayo ⚡ de zeus")
-        }
+        jugador = prompt("Elige una opción, mortal: 1 para la piedra 🪨 de hades, 2 para el agua 🌊 de poseidon o 3 para el rayo ⚡ de zeus")
+
+        alert("La Parca ☠️ ha elegido: " + eleccion(parca))
+        alert("Tú has elegido: " + eleccion(jugador))
+
         //Combat
         if (parca == jugador) {
             alert("Haz empatado con la parca! Aún sigues vivo...")
@@ -41,13 +43,13 @@
         } else if (jugador == 3 && parca == 2) {
             alert("La parca ha perdido! Felicidades mortal...")
         } else {
-            alert("La parca ha trinfado...☠️")
+            alert("La parca ha triunfado...☠️")
         }
     </script>
 </head>
 
 <body>
-    <h1>Como los grandes dioses juegan!</h1>
+    <h1>Como los tres grandes juegan!</h1>
     <h2>Al piedra, papel y tijeras!</h2>
 </body>
 
